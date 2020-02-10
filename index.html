@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="local">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h2 class="display-4">List Array</h2>
+                <br>
+                <p class="h4 text-primary"><span><i class="fas fa-user-circle"></i> Create an account</span></p>
+
+                <form id="form-account" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-1">
+                            <label for="inputUid">ID</label>
+                            <input type="text" name="uid" class="form-control" id="inputUid" disabled>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="inputFirstName">First name</label>
+                            <input type="text" name="firstName" class="form-control" id="inputFirstName" placeholder="First name">
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputLastName">Last name</label>
+                            <input type="text" name="lastName" class="form-control" id="inputLastName" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="inputCountry">Country</label>
+                            <input type="text" name="country" class="form-control" id="inputCountry" placeholder="Country">
+                        </div>
+
+                        <div class="form-group col">
+                            <label for="inputCity">City</label>
+                            <input type="text" name="city" class="form-control" id="inputCity" placeholder="City">
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" name="zipcode" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Favorite Color</span>
+                        </div>
+                        <input type="color" name="color" class="form-control" id="inputColor">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" name="photo" class="custom-file-input" accept=".gif,.jpg,.jpeg,.png" id="inputGroupFile02">
+                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add</button>
+                    <button type="button" class="btn btn-info" disabled><i class="fas fa-exchange-alt"></i> Change</button>
+                    <button type="reset" class="btn btn-danger"><i class="fas fa-times"></i> Cancel</button>
+
+
+                    <a class="btn btn-dark" href="script/ListArray.js" role="button" target="_blank">
+                        <i class="fas fa-download"></i> Download JS
+                    </a>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <p class="h5 text-danger"><span><i class="fas fa-list"></i> List Accounts</span></p>
+
+            <table class="table table-hover col">
+                <thead class="thead-light">
+                    <tr>
+                        <th width="1%">ID</th>
+                        <th width="1%">Photo</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Zip</th>
+                        <th>Favorite Color</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody id="list-accounts">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="fixed-bottom text-center bg-dark text-white" style="padding-top: 5px; padding-bottom: 5px;">
+        Created by: Marcus Vinicius Oliveira Silva
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    <script src="script/ListArray.js"></script>
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
