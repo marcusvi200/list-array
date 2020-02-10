@@ -173,6 +173,7 @@ document.getElementById("form-account").addEventListener("submit", (event) => {
 });
 
 changeButton.addEventListener("click", (event) => {
+
     event.preventDefault();
     eventButton.adding();
     renderForm().then((obj) => {
