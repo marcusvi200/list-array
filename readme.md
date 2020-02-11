@@ -1,4 +1,4 @@
-# ListArray - Version 0.1.0
+# ListArray - Version 0.1.1
 
 ## Browser Support
 
@@ -87,7 +87,7 @@ let result = listArray.getByName('Register-1');
 ```js
 let result = listArray.deleteUID(1);
 ```
-> _result_ __returns__ [{uid: 2, name: 2, value: {name: "Marcus", age: 28, country: "Brazil"}}]
+> _result_ __returns__ [{uid: 1, name: "Register-1", value: {name: "Marcus", age: 28, country: "Brazil"}}]
 
 ### Delete all ListArray content
 ```js

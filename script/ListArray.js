@@ -2,7 +2,8 @@ class ListArray {
 
     /**
      * @author Marcus Vinicius Oliveira Silva
-     * @version 0.1.0
+     * @version 0.1.1
+     * @description Changed in deleteUID to return the value that was deleted
      * @description This class is to group many objects inside of array
      */
     constructor() {
@@ -174,6 +175,7 @@ class ListArray {
      * @param {Integer} uid 
      */
     deleteUID(uid) {
+        let oldElement = this.getByUID(uid);
         this._array.find(function(element, index, array) {
             if (element.uid == uid) {
                 array.splice(index, 1);
@@ -183,7 +185,7 @@ class ListArray {
             }
         });
 
-        return this.array;
+        return oldElement;
     }
 
     /**
