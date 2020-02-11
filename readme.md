@@ -1,4 +1,4 @@
-# ListArray - Version 0.1.1
+# ListArray - Version 0.1.3
 
 ## Browser Support
 
