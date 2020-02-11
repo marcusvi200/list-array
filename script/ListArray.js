@@ -2,6 +2,10 @@ class ListArray {
 
     /**
      * @author Marcus Vinicius Oliveira Silva
+     * @version 0.1.3
+     * @description Changed the push to do also through assignment
+     * @version 0.1.2
+     * @description Treat concatenation to avoid adding non-class elements
      * @version 0.1.1
      * @description Changed in deleteUID to return the value that was deleted
      * @description This class is to group many objects inside of array
@@ -25,6 +29,28 @@ class ListArray {
      */
     getSize() {
         return this._array.length;
+    }
+
+    /**
+     * @description Joins two or more ListArray, and returns a copy of the joined arrays
+     * @param {ListArray} listArray
+     */
+    concat(...listArray) {
+        listArray.forEach(lstArray => {
+            if (lstArray instanceof ListArray) {
+                lstArray.array.forEach(element => {
+                    if (element.name !== element.uid) {
+                        this.push(element.value, element.name);
+                    } else {
+                        this.push(element.value);
+                    }
+                });
+
+                return this.array;
+            } else {
+                console.error("It is only allowed to concatenate with objects from the same ListArray instance!");
+            }
+        });
     }
 
     /**
@@ -122,6 +148,11 @@ class ListArray {
         return this.getByUID(uid)[0];
     }
 
+    /**
+     * @description Duplicate an object within the list
+     * @param {Number} uid 
+     * @param {String} newName 
+     */
     duplicate(uid, newName = undefined) {
         if (newName == undefined) {
             if (this.getByUID(uid)[0].name !== this.getByUID(uid)[0].uid) {
@@ -209,6 +240,15 @@ class ListArray {
                 return parseInt(elA.uid) < parseInt(elB.uid);
             }
         });
+    }
+
+
+    /**
+     * @description Push only value
+     * @param {Object} value
+     */
+    set array(value) {
+        this.push(value);
     }
 
     /**
