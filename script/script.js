@@ -79,30 +79,30 @@ populateForm = (data, value) => {
     }
 }
 
-addLine = (data) => {
+addLine = (data, uid) => {
 
     return new Promise((resolve, reject) => {
 
         let createTr = document.createElement("tr");
 
-        getPhoto(data.value.photo).then((content) => {
+        getPhoto(data.photo).then((content) => {
 
-            let tr = `<td>${data.uid}</td>
+            let tr = `<td>${uid}</td>
                       <td><img src="${content}" class="rounded mx-auto d-block" style="max-width: 35px; max-height: 35px;"></img></td>
-                      <td>${data.value.lastName}</td>
-                      <td>${data.value.firstName}</td>
-                      <td>${data.value.country}</td>
-                      <td>${data.value.city}</td>
-                      <td>${data.value.zipcode}</td>
-                      <td><span class="img_round" style="background-color: ${data.value.color};"></span></td>
+                      <td>${data.lastName}</td>
+                      <td>${data.firstName}</td>
+                      <td>${data.country}</td>
+                      <td>${data.city}</td>
+                      <td>${data.zipcode}</td>
+                      <td><span class="img_round" style="background-color: ${data.color};"></span></td>
                       <td>
                             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                                 <div class="btn-group" role="group">
                                     <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</button>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                        <a class="dropdown-item" onclick="duplicateAccount(${data.uid})"><i class="fas fa-plus-square"></i> Add again</a>
-                                        <a class="dropdown-item" onclick="editAccount(${data.uid})"><i class="fas fa-user-edit"></i> Edit info</a>
-                                        <a class="dropdown-item" onclick="removeAccount(${data.uid})"><i class="fas fa-trash-alt"></i> Remove</a>
+                                        <a class="dropdown-item" onclick="duplicateAccount(${uid})"><i class="fas fa-plus-square"></i> Add again</a>
+                                        <a class="dropdown-item" onclick="editAccount(${uid})"><i class="fas fa-user-edit"></i> Edit info</a>
+                                        <a class="dropdown-item" onclick="removeAccount(${uid})"><i class="fas fa-trash-alt"></i> Remove</a>
                                     </div>
                                 </div>
                             </div>
@@ -149,8 +149,8 @@ getPhoto = (photo) => {
 renderList = () => {
     document.getElementById("list-accounts").innerHTML = "";
 
-    listArray.array.forEach((value) => {
-        addLine(value).then((tr) => {
+    listArray.forEach((value, name, uid) => {
+        addLine(value, uid).then((tr) => {
             document.getElementById('list-accounts').appendChild(tr);
         });
     });
@@ -158,7 +158,8 @@ renderList = () => {
 }
 
 addNewTr = (data) => {
-    addLine(listArray.push(data)).then((tr) => {
+    let nLine = listArray.push(data)
+    addLine(nLine.value, nLine.uid).then((tr) => {
         document.getElementById('list-accounts').appendChild(tr);
     });
 }

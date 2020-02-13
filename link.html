@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Link between ListArray</title>
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container container-lg">
+        <p>
+            <a class="btn btn-danger" href="index.html" role="button">
+                <i class="fas fa-chevron-left"></i> Back to List Array basic
+            </a>
+        </p>
+
+        <div class="row">
+            <a class="btn btn-success" href="script/bond.js" target="_blank" role="button">
+                <i class="fas fa-chevron-right"></i> View script
+            </a>
+
+            <div class="col">
+                <h2>TGFCAB</h2>
+
+                <table class="table table-hover" width="100%">
+                    <thead>
+                        <th class="table-primary">NUNOTA</th>
+                        <th class="table-secondary">CODEMP</th>
+                        <th class="table-secondary">CODVEND</th>
+                        <th>VLRNOTA</th>
+                    </thead>
+                    <tbody id="TGFCAB"></tbody>
+                </table>
+            </div>
+
+            <div class="col">
+                <h2>TGFITE</h2>
+
+                <table class="table table-hover" width="100%">
+                    <thead>
+                        <th class="table-primary">NUNOTA</th>
+                        <th>SEQUENCIA</th>
+                        <th class="table-secondary">CODPROD</th>
+                    </thead>
+                    <tbody id="TGFITE"></tbody>
+                </table>
+
+            </div>
+
+            <div class="col">
+                <h2>TGFPRO</h2>
+
+                <table class="table table-hover" width="100%">
+                    <thead>
+                        <th class="table-primary">CODPROD</th>
+                        <th>DESCRPROD</th>
+                    </thead>
+                    <tbody id="TGFPRO"></tbody>
+                </table>
+
+            </div>
+
+            <div class="container row">
+                <div class="col">
+                    <h2>TGFCAB x TGFITE x TGFPRO | 1st way</h2>
+                    <a class="btn btn-success" href="script/listBond.js" target="_blank" role="button">
+                        <i class="fas fa-chevron-right"></i> View script
+                    </a>
+                    <h6 class="text-right" id="runtime1form"></h6>
+
+                    <table class="table table-hover" width="100%">
+                        <thead>
+                            <th class="table-secondary">NUNOTA</th>
+                            <th class="table-secondary">CODEMP</th>
+                            <th class="table-secondary">CODVEND</th>
+                            <th>VLRNOTA</th>
+                            <th>SEQUENCIA</th>
+                            <th class="table-secondary">CODPROD</th>
+                            <th>DESCPROD</th>
+                        </thead>
+                        <tbody id="TGFCAB_TGFITE_TGFPRO"></tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <div class="container row">
+                <div class="col">
+                    <h2>TGFCAB x TGFITE x TGFPRO | 2nd way</h2>
+                    <a class="btn btn-success" href="script/listBond2.js" target="_blank" role="button">
+                        <i class="fas fa-chevron-right"></i> View script
+                    </a>
+
+                    <h6 class="text-right" id="runtime2form"></h6>
+
+                    <table class="table table-hover" width="100%">
+                        <thead>
+                            <th class="table-secondary">NUNOTA</th>
+                            <th class="table-secondary">CODEMP</th>
+                            <th class="table-secondary">CODVEND</th>
+                            <th>VLRNOTA</th>
+                            <th>SEQUENCIA</th>
+                            <th class="table-secondary">CODPROD</th>
+                            <th>DESCPROD</th>
+                        </thead>
+                        <tbody id="TGFCAB_TGFITE_TGFPRO_2"></tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
+            <script src="script/ListArray.js"></script>
+            <script src="script/bond.js"></script>
+            <script src="script/populate.js"></script>
+            <script src="script/listBond.js"></script>
+            <script src="script/listBond2.js"></script>
+
+
+</body>
+
+</html>
