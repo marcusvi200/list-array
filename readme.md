@@ -6,6 +6,10 @@
 --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 
+## Example
+
+[See a simple example!](https://marcusvi200.github.io/list-array/)
+
 ## How to use
 
 ### Instantiating a ListArray
