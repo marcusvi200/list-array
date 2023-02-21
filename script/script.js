@@ -70,7 +70,6 @@ populateForm = (data, value) => {
                 data.checked = value;
                 break;
             case 'file':
-                continue;
                 break;
             default:
                 data.value = value;
@@ -165,6 +164,7 @@ addNewTr = (data) => {
 }
 
 document.getElementById("form-account").addEventListener("submit", (event) => {
+    event.preventDefault();
     event.preventDefault();
     eventButton.adding();
     renderForm().then((render) => {
